@@ -35,7 +35,6 @@ export const UserFormParentComponent = () => {
   });
   const { setProducts } = useContext(ProductContext);
   const onSubmit = (productData) => {
-    console.log(productData);
     reset();
     setProducts((prevState) => [...prevState, productData]);
   };
@@ -58,7 +57,7 @@ export const UserFormParentComponent = () => {
         {/*Product Name*/}
         <TextFiledSingleComponent
           input={{
-            name: " ",
+            name: "productName",
             label: "Product Name",
             errors: errors,
             register: register,
